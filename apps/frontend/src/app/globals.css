@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Fonts */
+    --font-outfit: 'Outfit', sans-serif;
+    --font-hind-siliguri: 'Hind Siliguri', sans-serif;
+
+    /* Light Mode (Default) - Pure White background with #242424 base dark */
+    --background: 0 0% 100%; /* #ffffff */
+    --foreground: 0 0% 14.12%; /* #242424 */
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 14.12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 14.12%;
+
+    --primary: 0 0% 14.12%; /* #242424 */
+    --primary-foreground: 0 0% 100%; /* #ffffff */
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 14.12%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 94%;
+    --accent-foreground: 0 0% 14.12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 0% 14.12%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Dark Mode - #242424 base background with white foreground */
+    --background: 0 0% 14.12%; /* #242424 */
+    --foreground: 0 0% 100%; /* #ffffff */
+
+    --card: 0 0% 17%; /* #2b2b2b (elevated card on #242424) */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 17%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 0 0% 100%; /* #ffffff */
+    --primary-foreground: 0 0% 14.12%; /* #242424 */
+
+    --secondary: 0 0% 21%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 68%;
+
+    --accent: 0 0% 22%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 24%;
+    --input: 0 0% 24%;
+    --ring: 0 0% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-outfit), var(--font-hind-siliguri), system-ui, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+}
